@@ -6,7 +6,7 @@ import {
 import RestaurantCard from './src/components/RestaurantCard';
 import styles from './src/styles';
 
-const bgImage = { uri: 'https://png.pngtree.com/background/20210709/original/pngtree-food-western-food-steak-tomato-picture-image_941801.jpg' };
+const bgImage = { uri: 'https://cdn.vox-cdn.com/thumbor/VLlJzyNRHfwWEzIN7oqT1Gvu7WU=/0x0:1280x853/920x690/filters:focal(538x325:742x529):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/58260213/untitled_2451.100.jpeg' };
 
 export default function App() {
   const [allRestaurants, setAllRestaurants] = useState();
