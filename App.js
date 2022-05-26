@@ -10,7 +10,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='' >
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Home" component={Home} options={{title: 'Local Restaurants'}} />
       </Stack.Navigator>
       <StatusBar style='auto' />
     </NavigationContainer>
