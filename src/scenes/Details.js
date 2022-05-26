@@ -3,7 +3,7 @@ import styles from '../styles';
 
 export default function Details() {
     return (
-        <View>
+        <View style={styles.restaurantCard}>
             <Text style={styles.restaurantsName} >Details Page</Text>
         </View>
     )
