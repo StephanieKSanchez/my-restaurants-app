@@ -54,4 +54,6 @@ export default function Details() {
           </>
         )
       }
+    </View>
+    )
 }
