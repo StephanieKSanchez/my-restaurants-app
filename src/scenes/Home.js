@@ -5,14 +5,17 @@ import RestaurantCard from "../components/RestaurantCard";
 
 export default function Home({ navigation }) {
     const [allRestaurants, setAllRestaurants] = useState();
-    const { setCurrentRestaurant } = useContext(SingleRestaurantContext);
+    const { setCurrentRestaurant, ratingsUpdated } = useContext(SingleRestaurantContext);
 
     useEffect(() =>{
         fetch('https://my-first-firestore-sks.web.app/restaurants/')
         .then(res => res.json())
-        .then(setAllRestaurants)
+        .then(data => {
+            const sortedRestaurantList = data.sort((a,b) => b.rating - a.rating)
+            setAllRestaurants(sortedRestaurantList)
+        })
         .catch(console.error)
-    }, [])
+    }, [ratingsUpdated])
 
     const handlePress = (singleRestaurant) => {
         setCurrentRestaurant(singleRestaurant);

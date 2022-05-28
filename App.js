@@ -11,8 +11,10 @@ export const SingleRestaurantContext = createContext(null);
 
 export default function App() {
   const [currentRestaurant, setCurrentRestaurant] = useState();
+  const [ratingsUpdated, setRatingsUpdated] = useState(0)
   return (
-    <SingleRestaurantContext.Provider value={{ currentRestaurant, setCurrentRestaurant }} >
+    <SingleRestaurantContext.Provider 
+    value={{ currentRestaurant, setCurrentRestaurant, ratingsUpdated, setRatingsUpdated }} >
       <NavigationContainer>
       <Stack.Navigator initialRouteName='' >
         <Stack.Screen name="Home" component={Home} options={{title: 'Local Restaurants'}} />
